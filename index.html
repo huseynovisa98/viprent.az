@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="az" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VipRent.az — Bakıda Lüks Avtomobil İcarəsi və VIP Transfer</title>
+  <meta name="description" content="Bakıda premium və lüks avtomobillərin icarəsi, Heydər Əliyev Hava Limanı VIP transferi, sürücü ilə icarə və toy kortejləri xidməti." />
+  <meta property="og:title" content="VipRent.az — Bakıda Lüks Avtomobil İcarəsi və VIP Transfer" />
+  <meta property="og:description" content="Bakıda Mercedes S-Class, G-Class, BMW 7, Range Rover və Maybach icarəsi. Şoferlə icarə və aeroport transferi." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#07080B',
+            surface: '#0F1117',
+            card: '#141720',
+            gold: {
+              DEFAULT: '#D4AF37',
+              light: '#F5E6BE',
+              dark: '#AA820A'
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background-color: #07080B;
+      color: #F1F5F9;
+      overflow-x: hidden;
+    }
+    .font-serif-luxury {
+      font-family: 'Cinzel', Georgia, serif;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #07080B;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #232733;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D4AF37;
+    }
+    .glass-panel {
+      background: rgba(15, 17, 23, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-panel-gold {
+      background: rgba(17, 19, 26, 0.90);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFFFFF 0%, #F5E6BE 40%, #D4AF37 80%, #AA820A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-[#07080B] text-slate-100 antialiased selection:bg-[#D4AF37]/30 selection:text-white flex flex-col min-h-screen">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="sticky top-0 z-50 w-full glass-panel border-b border-white/10 bg-[#07080B]/90 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+        <!-- Zone 1: Brand Wordmark -->
+        <a href="#" class="flex items-center gap-3 shrink-0 group">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-[#D4AF37] via-[#AA820A] to-[#604905] p-[1px] shadow-lg shadow-[#D4AF37]/20 flex items-center justify-center">
+            <div class="w-full h-full bg-[#07080B] rounded-[7px] flex items-center justify-center">
+              <span class="font-serif-luxury text-base font-bold text-[#D4AF37]">VR</span>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif-luxury text-xl font-extrabold tracking-wider text-white">
+              VipRent<span class="text-[#D4AF37]">.az</span>
+            </span>
+            <span class="text-[10px] tracking-widest text-slate-400 uppercase -mt-0.5">
+              Baku Luxury Car Rental
+            </span>
+          </div>
+        </a>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
+          <a href="#fleet-section" class="hover:text-[#D4AF37] transition-colors whitespace-nowrap shrink-0">Avtopark / Flot</a>
+          <a href="#services-section" class="hover:text-[#D4AF37] transition-colors whitespace-nowrap shrink-0">Xidmətlər</a>
+          <button onclick="openRequirementsModal()" class="hover:text-[#D4AF37] transition-colors whitespace-nowrap shrink-0 flex items-center gap-1.5 cursor-pointer">
+            <svg class="w-4 h-4 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <span>İcarə Qaydaları</span>
+          </button>
+          <a href="#reviews-section" class="hover:text-[#D4AF37] transition-colors whitespace-nowrap shrink-0">Rəylər</a>
+          <a href="#faq-section" class="hover:text-[#D4AF37] transition-colors whitespace-nowrap shrink-0">FAQ</a>
+          <a href="#contact-section" class="hover:text-[#D4AF37] transition-colors whitespace-nowrap shrink-0">Əlaqə</a>
+        </nav>
+
+        <!-- Zone 3: Currency Switcher & Actions -->
+        <div class="flex items-center gap-3 shrink-0">
+          <!-- Currency Switcher -->
+          <div class="hidden sm:flex items-center bg-[#141720] border border-white/10 rounded-lg p-0.5" id="currency-switcher">
+            <button onclick="setCurrency('AZN')" id="curr-btn-AZN" class="px-2.5 py-1 text-xs rounded transition-all bg-[#D4AF37] text-black font-bold">AZN</button>
+            <button onclick="setCurrency('USD')" id="curr-btn-USD" class="px-2.5 py-1 text-xs rounded transition-all text-slate-400 hover:text-white">USD</button>
+            <button onclick="setCurrency('EUR')" id="curr-btn-EUR" class="px-2.5 py-1 text-xs rounded transition-all text-slate-400 hover:text-white">EUR</button>
+          </div>
+
+          <!-- Hotline Direct -->
+          <a href="tel:+994502202020" class="hidden md:flex items-center gap-2 px-3 py-2 text-xs font-semibold text-slate-300 hover:text-white rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-colors">
+            <svg class="w-3.5 h-3.5 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <span class="tabular-nums">+994 50 220 20 20</span>
+          </a>
+
+          <!-- Primary Reservation CTA -->
+          <button onclick="openBookingModal('mercedes-s-class-w223')" class="flex items-center gap-2 px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-black bg-gradient-to-r from-[#F5E6BE] via-[#D4AF37] to-[#AA820A] hover:brightness-110 active:scale-95 transition-all rounded-lg shadow-md shadow-[#D4AF37]/25 cursor-pointer whitespace-nowrap shrink-0">
+            <svg class="w-4 h-4 fill-black/20" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+            <span>Rezervasiya</span>
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-slate-400 hover:text-white rounded-lg bg-white/5 border border-white/10" aria-label="Menyu">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#0B0D13] border-b border-white/10 px-6 py-6 space-y-4">
+      <div class="flex items-center justify-between pb-4 border-b border-white/10">
+        <span class="text-xs uppercase tracking-wider text-slate-400">Valyuta:</span>
+        <div class="flex items-center bg-[#141720] border border-white/10 rounded-lg p-0.5">
+          <button onclick="setCurrency('AZN')" class="px-3 py-1 text-xs font-semibold rounded bg-[#D4AF37] text-black">AZN</button>
+          <button onclick="setCurrency('USD')" class="px-3 py-1 text-xs font-semibold rounded text-slate-400">USD</button>
+          <button onclick="setCurrency('EUR')" class="px-3 py-1 text-xs font-semibold rounded text-slate-400">EUR</button>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-3 text-base font-medium text-slate-200">
+        <a href="#fleet-section" onclick="toggleMobileMenu()" class="py-2 hover:text-[#D4AF37]">Avtopark / Flot</a>
+        <a href="#services-section" onclick="toggleMobileMenu()" class="py-2 hover:text-[#D4AF37]">Xidmətlər (Transfer & Şofer)</a>
+        <button onclick="toggleMobileMenu(); openRequirementsModal();" class="text-left py-2 hover:text-[#D4AF37] flex items-center justify-between">
+          <span>İcarə Qaydaları & Tələblər</span>
+          <svg class="w-4 h-4 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </button>
+        <a href="#reviews-section" onclick="toggleMobileMenu()" class="py-2 hover:text-[#D4AF37]">Müştəri Rəyləri</a>
+        <a href="#faq-section" onclick="toggleMobileMenu()" class="py-2 hover:text-[#D4AF37]">FAQ</a>
+        <a href="#contact-section" onclick="toggleMobileMenu()" class="py-2 hover:text-[#D4AF37]">Əlaqə & Ünvan</a>
+      </div>
+      <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
+        <a href="tel:+994502202020" class="flex items-center justify-center gap-2 py-3 rounded-lg bg-white/5 border border-white/10 text-white font-medium text-sm tabular-nums">
+          <svg class="w-4 h-4 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <span>+994 50 220 20 20</span>
+        </a>
+        <a href="https://wa.me/994502202020?text=Salam,%20VipRent.az%20saytından%20avtomobil%20icarəsi%20haqqında%20məlumat%20almaq%20istəyirəm." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 rounded-lg bg-[#25D366] text-black font-bold text-sm">
+          <span>WhatsApp ilə Yazın</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative min-h-[90vh] flex flex-col justify-between pt-10 pb-16 overflow-hidden">
+    <!-- Background overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1920&q=80" alt="Baku Luxury Night Drive" class="w-full h-full object-cover object-center brightness-35 filter scale-105" />
+      <div class="absolute inset-0 bg-gradient-to-t from-[#07080B] via-[#07080B]/80 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6 sm:pt-12">
+      <!-- Tagline -->
+      <div class="flex items-center gap-2 mb-4 text-xs font-semibold uppercase tracking-widest text-[#D4AF37]">
+        <span class="w-6 h-[1px] bg-[#D4AF37]"></span>
+        <span>V.I.P. Car Rental & Chauffeur Service · Baku, Azerbaijan</span>
+      </div>
+
+      <!-- Main Headline -->
+      <div class="max-w-4xl mb-6">
+        <h1 class="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15]">
+          Bakıda Lüks Avtomobil İcarəsi və <span class="gold-gradient-text">VIP Şofer Xidməti</span>
+        </h1>
+        <p class="mt-5 text-base sm:text-lg text-slate-300 font-normal leading-relaxed max-w-2xl">
+          Mercedes S-Class, G-Class, Range Rover və Maybach modelləri. Heydər Əliyev Hava Limanında fərdi adla qarşılanma, diplomatik səfərlər və toy kortejləri üçün qüsursuz avtopark.
+        </p>
+      </div>
+
+      <!-- Interactive Search / Filter Engine -->
+      <div class="mt-8 glass-panel-gold rounded-2xl p-4 sm:p-6 shadow-2xl max-w-5xl">
+        <form onsubmit="handleHeroSearch(event)" class="space-y-4">
+          <!-- Top Mode Selector -->
+          <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-white/10">
+            <div class="flex items-center p-1 bg-[#0F1117] rounded-xl border border-white/10">
+              <button type="button" id="driver-toggle-yes" onclick="setHeroDriver(true)" class="px-4 py-2 text-xs font-semibold rounded-lg bg-[#D4AF37] text-black shadow-md font-bold transition-all">
+                Şoferlə (Sürücü ilə)
+              </button>
+              <button type="button" id="driver-toggle-no" onclick="setHeroDriver(false)" class="px-4 py-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-white transition-all">
+                Sürücüsüz İcarə
+              </button>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-400">
+              <span>Minimum yaş 21+</span>
+              <span aria-hidden="true">·</span>
+              <button type="button" onclick="openRequirementsModal()" class="text-[#D4AF37] hover:underline cursor-pointer">Bütün tələblər</button>
+            </div>
+          </div>
+
+          <!-- Input Fields -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Təhvil yeri</label>
+              <select id="hero-location" class="w-full bg-[#0B0D13] border border-white/15 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-[#D4AF37]">
+                <option value="Heydər Əliyev Hava Limanı (GYD)">Heydər Əliyev Aeroportu (GYD)</option>
+                <option value="Port Baku / Şəhər Mərkəzi">Port Baku / Şəhər Mərkəzi</option>
+                <option value="Otel və ya Şəxsi Ünvan">Otel və ya Şəxsi Ünvan</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Götürülmə tarixi</label>
+              <input type="date" id="hero-start-date" value="2026-10-25" class="w-full bg-[#0B0D13] border border-white/15 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-[#D4AF37] [color-scheme:dark]" />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Qaytarılma tarixi</label>
+              <input type="date" id="hero-end-date" value="2026-10-28" class="w-full bg-[#0B0D13] border border-white/15 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-[#D4AF37] [color-scheme:dark]" />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Avtomobil kateqoriyası</label>
+              <select id="hero-category" class="w-full bg-[#0B0D13] border border-white/15 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-[#D4AF37]">
+                <option value="all">Bütün Avtomobillər (12)</option>
+                <option value="luxury">Lüks Sedanlar</option>
+                <option value="suv">SUV & Off-Road</option>
+                <option value="sports">İdman & Kabriolet</option>
+                <option value="minivan">VIP Minivan & Mikroavtobus</option>
+                <option value="business">Biznes Klass</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+            <div class="text-xs text-slate-300">
+              3 gün və daha çox icarələrdə aeroportda qarşılanma <strong class="text-[#D4AF37]">pulsuzdur</strong>
+            </div>
+            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-black bg-gradient-to-r from-[#F5E6BE] via-[#D4AF37] to-[#AA820A] hover:brightness-110 active:scale-95 transition-all rounded-xl shadow-lg shadow-[#D4AF37]/30 cursor-pointer">
+              Avtomobilləri Göstər →
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- 4-Column Proof & Trust Banner -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-12">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 border-t border-white/10 pt-6">
+        <div class="flex items-start gap-3">
+          <div class="p-2.5 rounded-xl bg-white/5 border border-white/10 text-[#D4AF37] shrink-0 font-bold">50+</div>
+          <div>
+            <div class="text-sm sm:text-base font-bold text-white tabular-nums">Premium Avtopark</div>
+            <div class="text-xs text-slate-400">Mercedes, Range Rover, Maybach</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="p-2.5 rounded-xl bg-white/5 border border-white/10 text-[#D4AF37] shrink-0 font-bold">100%</div>
+          <div>
+            <div class="text-sm sm:text-base font-bold text-white">KASKO Sığorta</div>
+            <div class="text-xs text-slate-400">Tam rəsmi hüquqi zəmanət</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="p-2.5 rounded-xl bg-white/5 border border-white/10 text-[#D4AF37] shrink-0 font-bold">15 Dəq</div>
+          <div>
+            <div class="text-sm sm:text-base font-bold text-white">Sürətli Təhvil</div>
+            <div class="text-xs text-slate-400">Minimal sənədləşmə & dərhal açar</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="p-2.5 rounded-xl bg-white/5 border border-white/10 text-[#D4AF37] shrink-0 font-bold">24/7</div>
+          <div>
+            <div class="text-sm sm:text-base font-bold text-white">VIP Şofer & GYD</div>
+            <div class="text-xs text-slate-400">Aeroportda adla qarşılanma</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FLEET CATALOG ==================== -->
+  <section id="fleet-section" class="py-20 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-white/10">
+      <div>
+        <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#D4AF37] mb-2">
+          <span class="w-5 h-[1px] bg-[#D4AF37]"></span>
+          <span>VIP Avtopark · Bakı</span>
+        </div>
+        <h2 class="font-serif-luxury text-3xl sm:text-4xl font-bold text-white tracking-tight">
+          Lüks və Premium Avtomobil Flotumuz
+        </h2>
+        <p class="mt-2 text-sm text-slate-400 max-w-2xl">
+          Mercedes S-Class, G-Class, Maybach, Range Rover və BMW 7 seriyası. Bütün avtomobillər tam texniki baxışdan keçmiş, mükəmməl salona malik və KASKO sığortalıdır.
+        </p>
+      </div>
+
+      <div class="flex items-center gap-2 text-xs text-slate-400">
+        <span>Göstərilir:</span>
+        <span id="vehicle-count" class="font-bold text-[#D4AF37] text-sm tabular-nums">12 / 12</span>
+        <span>avtomobil</span>
+      </div>
+    </div>
+
+    <!-- Filters & Search Bar -->
+    <div class="mt-8 space-y-4">
+      <!-- Category Buttons -->
+      <div class="flex items-center gap-1.5 p-1.5 bg-[#0F1117] rounded-xl border border-white/10 overflow-x-auto">
+        <button onclick="filterCategory('all')" id="cat-all" class="cat-btn px-4 py-2 text-xs font-semibold rounded-lg bg-[#D4AF37] text-black shadow-md font-bold whitespace-nowrap">Hamısı</button>
+        <button onclick="filterCategory('luxury')" id="cat-luxury" class="cat-btn px-4 py-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-white whitespace-nowrap">Lüks Sedanlar</button>
+        <button onclick="filterCategory('suv')" id="cat-suv" class="cat-btn px-4 py-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-white whitespace-nowrap">SUV & Off-Road</button>
+        <button onclick="filterCategory('sports')" id="cat-sports" class="cat-btn px-4 py-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-white whitespace-nowrap">İdman & Kabriolet</button>
+        <button onclick="filterCategory('minivan')" id="cat-minivan" class="cat-btn px-4 py-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-white whitespace-nowrap">VIP Minivan & Bus</button>
+        <button onclick="filterCategory('business')" id="cat-business" class="cat-btn px-4 py-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-white whitespace-nowrap">Biznes Klass</button>
+      </div>
+
+      <!-- Search & Sort -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
+        <div class="relative w-full sm:w-80">
+          <input type="text" id="car-search" oninput="handleSearchInput()" placeholder="Model axtarın (məs. G63, S-Class, Maybach)..." class="w-full bg-[#0F1117] border border-white/10 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
+        </div>
+
+        <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+          <select id="sort-select" onchange="handleSortChange()" class="bg-[#0F1117] border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-slate-300 focus:outline-none focus:border-[#D4AF37]">
+            <option value="recommended">Tövsiyə olunan</option>
+            <option value="price-asc">Qiymət: Aşağıdan yuxarı</option>
+            <option value="price-desc">Qiymət: Yuxarıdan aşağı</option>
+            <option value="year">Ən yeni buraxılış ili</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vehicles Grid Container -->
+    <div id="fleet-grid" class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      <!-- Generated via JS -->
+    </div>
+  </section>
+
+  <!-- ==================== CORE SERVICES ==================== -->
+  <section id="services-section" class="py-24 relative bg-[#090A0F] border-t border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-16">
+        <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#D4AF37] mb-2">
+          <span class="w-5 h-[1px] bg-[#D4AF37]"></span>
+          <span>Fərdi V.I.P. Xidmətlər</span>
+        </div>
+        <h2 class="font-serif-luxury text-3xl sm:text-4xl font-bold text-white tracking-tight">
+          Yalnız Avtomobil Deyil, Tam Lüks Xidmət Təcrübəsi
+        </h2>
+        <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+          Heydər Əliyev Beynəlxalq Hava Limanında qarşılanmadan, toy kortejlərinə və beynəlxalq nümayəndə heyətlərinin müşayiətinə qədər bütün logistika həlləri.
+        </p>
+      </div>
+
+      <!-- Services 4 Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Service 1: Airport Transfer -->
+        <div class="bg-[#0F1117] rounded-3xl border border-white/10 hover:border-[#D4AF37]/50 overflow-hidden shadow-xl transition-all flex flex-col justify-between">
+          <div class="relative aspect-[16/8] w-full overflow-hidden bg-[#141720]">
+            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80" alt="GYD Airport Transfer" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1117] via-[#0F1117]/40 to-transparent"></div>
+            <div class="absolute top-4 left-4 bg-black/70 border border-[#D4AF37]/40 px-3 py-1 rounded-md text-[11px] font-semibold text-[#D4AF37] uppercase">24/7 Fasiləsiz</div>
+            <div class="absolute top-4 right-4 text-xs font-mono font-bold text-white/50">01</div>
+          </div>
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-xs text-slate-400 font-medium mb-1">Baku GYD Airport Meet & Greet</div>
+              <h3 class="font-serif-luxury text-xl sm:text-2xl font-bold text-white">Heydər Əliyev Hava Limanı VIP Transfer</h3>
+              <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Uçuşunuzu onlayn izləyirik, sizi və ya dəyərli qonaqlarınızı terminalın çıxışında fərdi ad lövhəsi ilə qarşılayır, baqajınızı daşıyır və rahatlıqla təyinat nöqtəsinə çatdırırıq.
+              </p>
+              <div class="mt-4 space-y-1.5 border-t border-white/5 pt-4 text-xs text-slate-300">
+                <div>✓ Uçuş gecikmələrində 60 dəqiqə pulsuz gözləmə</div>
+                <div>✓ VIP ad lövhəsi ilə fərdi qarşılanma</div>
+                <div>✓ Salonda pulsuz Wi-Fi və sərinləşdirici içkilər</div>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+              <div class="text-xs font-semibold text-[#D4AF37]">80 ₼-dən başlayan qiymətlərlə</div>
+              <button onclick="openBookingModal('mercedes-v-class-vip')" class="px-4 py-2 rounded-xl bg-[#D4AF37] text-black text-xs font-bold uppercase tracking-wider hover:brightness-110">Sifariş Et</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2: VIP Chauffeur -->
+        <div class="bg-[#0F1117] rounded-3xl border border-white/10 hover:border-[#D4AF37]/50 overflow-hidden shadow-xl transition-all flex flex-col justify-between">
+          <div class="relative aspect-[16/8] w-full overflow-hidden bg-[#141720]">
+            <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1200&q=80" alt="VIP Chauffeur Service" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1117] via-[#0F1117]/40 to-transparent"></div>
+            <div class="absolute top-4 left-4 bg-black/70 border border-[#D4AF37]/40 px-3 py-1 rounded-md text-[11px] font-semibold text-[#D4AF37] uppercase">Biznes Standart</div>
+            <div class="absolute top-4 right-4 text-xs font-mono font-bold text-white/50">02</div>
+          </div>
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-xs text-slate-400 font-medium mb-1">Şəxsi peşəkar sürücü xidməti</div>
+              <h3 class="font-serif-luxury text-xl sm:text-2xl font-bold text-white">Şoferlə Lüks İcarə (VIP Chauffeur)</h3>
+              <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Sükan arxasında yorulmadan, Bakının intensiv tıxaclarını düşünmədən yalnız işinizə və istirahətinizə fokuslanın. Xarici dil bilən, kostyumlu şəxsi sürücülər.
+              </p>
+              <div class="mt-4 space-y-1.5 border-t border-white/5 pt-4 text-xs text-slate-300">
+                <div>✓ Rəsmi kostyumlu, xarici dil bilən peşəkar sürücülər</div>
+                <div>✓ Saatlıq, günlük və ya aylıq fərdi qrafik</div>
+                <div>✓ Konfidensiallıq və təhlükəsizlik zəmanəti</div>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+              <div class="text-xs font-semibold text-[#D4AF37]">+50 ₼ / gün sürücü xidməti</div>
+              <button onclick="openBookingModal('mercedes-s-class-w223')" class="px-4 py-2 rounded-xl bg-[#D4AF37] text-black text-xs font-bold uppercase tracking-wider hover:brightness-110">Sifariş Et</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3: Wedding Escort -->
+        <div class="bg-[#0F1117] rounded-3xl border border-white/10 hover:border-[#D4AF37]/50 overflow-hidden shadow-xl transition-all flex flex-col justify-between">
+          <div class="relative aspect-[16/8] w-full overflow-hidden bg-[#141720]">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80" alt="Wedding Motorcade" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1117] via-[#0F1117]/40 to-transparent"></div>
+            <div class="absolute top-4 left-4 bg-black/70 border border-[#D4AF37]/40 px-3 py-1 rounded-md text-[11px] font-semibold text-[#D4AF37] uppercase">Toy & Mərasim</div>
+            <div class="absolute top-4 right-4 text-xs font-mono font-bold text-white/50">03</div>
+          </div>
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-xs text-slate-400 font-medium mb-1">Xüsusi günləriniz üçün unudulmaz kortej</div>
+              <h3 class="font-serif-luxury text-xl sm:text-2xl font-bold text-white">Toy Kortejləri və Gəlin Maşını</h3>
+              <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Həyatınızın ən gözəl günündə möhtəşəm Mercedes S-Class, G-Wagon və Rolls-Royce kortejləri. Peşəkar sürücülər, koordinasiyalı hərəkət və zövqlü bəzədilmə.
+              </p>
+              <div class="mt-4 space-y-1.5 border-t border-white/5 pt-4 text-xs text-slate-300">
+                <div>✓ Ağ və qara rəngdə eyni model lüks kortejlər</div>
+                <div>✓ Gəlin maşını üçün zövqlü bəzədilmə</div>
+                <div>✓ Foto və video çəkilişlər üçün hazır vəziyyət</div>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+              <div class="text-xs font-semibold text-[#D4AF37]">Xüsusi paket təklifləri</div>
+              <button onclick="openBookingModal('mercedes-g63-amg')" class="px-4 py-2 rounded-xl bg-[#D4AF37] text-black text-xs font-bold uppercase tracking-wider hover:brightness-110">Sifariş Et</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4: Corporate Fleet -->
+        <div class="bg-[#0F1117] rounded-3xl border border-white/10 hover:border-[#D4AF37]/50 overflow-hidden shadow-xl transition-all flex flex-col justify-between">
+          <div class="relative aspect-[16/8] w-full overflow-hidden bg-[#141720]">
+            <img src="https://images.unsplash.com/photo-1570733577524-3a047079e80d?auto=format&fit=crop&w=1200&q=80" alt="Corporate Fleet" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1117] via-[#0F1117]/40 to-transparent"></div>
+            <div class="absolute top-4 left-4 bg-black/70 border border-[#D4AF37]/40 px-3 py-1 rounded-md text-[11px] font-semibold text-[#D4AF37] uppercase">B2B Korporativ</div>
+            <div class="absolute top-4 right-4 text-xs font-mono font-bold text-white/50">04</div>
+          </div>
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-xs text-slate-400 font-medium mb-1">Diplomatik və biznes nümayəndəlikləri</div>
+              <h3 class="font-serif-luxury text-xl sm:text-2xl font-bold text-white">Qonaq Qarşılanması & Korporativ Avtopark</h3>
+              <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Beynəlxalq konfranslar, forumlar, səfirliklər və xarici şirkətlər üçün rəsmi nümayəndə heyətlərinin daşınması. Rəsmi müqavilə, elektron qaimə və bank köçürməsi ilə ödəniş.
+              </p>
+              <div class="mt-4 space-y-1.5 border-t border-white/5 pt-4 text-xs text-slate-300">
+                <div>✓ V-Class və Sprinter VIP avtobuslarla qrup transferləri</div>
+                <div>✓ Rəsmi müqavilə və bank köçürməsi ilə ödəniş</div>
+                <div>✓ Uzunmüddətli icarədə korporativ endirimlər</div>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+              <div class="text-xs font-semibold text-[#D4AF37]">Fərdi korporativ tariflər</div>
+              <button onclick="openBookingModal('mercedes-sprinter-vip')" class="px-4 py-2 rounded-xl bg-[#D4AF37] text-black text-xs font-bold uppercase tracking-wider hover:brightness-110">Sifariş Et</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== REVIEWS & FAQ ==================== -->
+  <section id="reviews-section" class="py-24 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+    <!-- Testimonials -->
+    <div>
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 pb-6 border-b border-white/10">
+        <div>
+          <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#D4AF37] mb-2">
+            <span class="w-5 h-[1px] bg-[#D4AF37]"></span>
+            <span>Etibar və Rəylər</span>
+          </div>
+          <h2 class="font-serif-luxury text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            Müştərilərimizin Təcrübəsi
+          </h2>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="text-[#D4AF37] font-bold text-base">★★★★★</span>
+          <span class="text-sm font-bold text-white tabular-nums">4.9 / 5.0</span>
+          <span class="text-xs text-slate-400">(Google Reviews & VIP Sifarişlər)</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        <div class="bg-[#0F1117] rounded-3xl p-6 sm:p-7 border border-white/10 flex flex-col justify-between shadow-xl">
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed italic">
+            "Xarici tərəfdaşlarımızın Bakı səfəri üçün 2 ədəd Mercedes S-Class W223 və 1 ədəd V-Class sifariş etdik. Dəqiqlik, sürücülərin yüksək səviyyəli etikası və avtomobillərin salon təmizliyi heyranedici idi."
+          </p>
+          <div class="mt-6 pt-5 border-t border-white/5 flex items-center gap-3.5">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Fərid Məmmədov" class="w-11 h-11 rounded-full object-cover border border-[#D4AF37]/40 shrink-0" />
+            <div>
+              <div class="text-sm font-bold text-white">Fərid Məmmədov</div>
+              <div class="text-[11px] text-slate-400">Təsisçi & CEO · Caspian Energy Tech</div>
+              <div class="text-[10px] text-[#D4AF37]">İcarə: Mercedes S-Class & V-Class</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#0F1117] rounded-3xl p-6 sm:p-7 border border-white/10 flex flex-col justify-between shadow-xl">
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed italic">
+            "Toy kortejlərimiz üçün daimi olaraq VipRent.az ilə əməkdaşlıq edirik. Ağ G63 AMG və Maybach korteji toya xüsusi əzəmət qatdı. Vaxtında çatdırılma və yüksək peşəkarlıq üçün təşəkkürlər!"
+          </p>
+          <div class="mt-6 pt-5 border-t border-white/5 flex items-center gap-3.5">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Leyla Əliyeva" class="w-11 h-11 rounded-full object-cover border border-[#D4AF37]/40 shrink-0" />
+            <div>
+              <div class="text-sm font-bold text-white">Leyla Əliyeva</div>
+              <div class="text-[11px] text-slate-400">Event Director · Baku Wedding Atelier</div>
+              <div class="text-[10px] text-[#D4AF37]">İcarə: Mercedes G63 AMG & Maybach</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#0F1117] rounded-3xl p-6 sm:p-7 border border-white/10 flex flex-col justify-between shadow-xl">
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed italic">
+            "I travel frequently to Baku for oil & gas projects. VipRent arranged GYD airport pick-up with a driver speaking fluent English. Seamless booking, no hidden fees, excellent Range Rover Autobiography."
+          </p>
+          <div class="mt-6 pt-5 border-t border-white/5 flex items-center gap-3.5">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="David Von Berg" class="w-11 h-11 rounded-full object-cover border border-[#D4AF37]/40 shrink-0" />
+            <div>
+              <div class="text-sm font-bold text-white">David Von Berg</div>
+              <div class="text-[11px] text-slate-400">Regional Director · DAX Logistics</div>
+              <div class="text-[10px] text-[#D4AF37]">İcarə: Range Rover Autobiography</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div id="faq-section" class="pt-6">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#D4AF37] mb-2">
+          <span>Məlumat Mərkəzi</span>
+        </div>
+        <h2 class="font-serif-luxury text-3xl sm:text-4xl font-bold text-white tracking-tight">
+          Tez-tez Verilən Suallar (FAQ)
+        </h2>
+        <p class="mt-3 text-xs sm:text-sm text-slate-400">
+          Avtomobil icarəsi, depozit qaydaları, hava limanı transferləri və sənədləşmə ilə bağlı ən vacib suallar.
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-3" id="faq-container">
+        <!-- FAQ item 1 -->
+        <div class="bg-[#0F1117] rounded-2xl border border-white/10 overflow-hidden">
+          <button onclick="toggleFAQ(0)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <span class="font-semibold text-sm sm:text-base text-white">Avtomobili icarəyə götürmək üçün hansı sənədlər tələb olunur?</span>
+            <span id="faq-icon-0" class="text-[#D4AF37] text-lg font-bold">−</span>
+          </button>
+          <div id="faq-answer-0" class="px-5 sm:px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-3">
+            Azərbaycan vətəndaşları üçün: etibarlı şəxsiyyət vəsiqəsi və ən azı 2 illik təcrübəsi olan sürücülük vəsiqəsi tələb olunur. Xarici vətəndaşlar üçün isə: xarici pasport və beynəlxalq və ya milli sürücülük vəsiqəsi kifayətdir.
+          </div>
+        </div>
+
+        <!-- FAQ item 2 -->
+        <div class="bg-[#0F1117] rounded-2xl border border-white/10 overflow-hidden">
+          <button onclick="toggleFAQ(1)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <span class="font-semibold text-sm sm:text-base text-white">Minimum yaş və sürücülük stajı tələbi nə qədərdir?</span>
+            <span id="faq-icon-1" class="text-[#D4AF37] text-lg font-bold">+</span>
+          </button>
+          <div id="faq-answer-1" class="hidden px-5 sm:px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-3">
+            Biznes və standart sinif avtomobillər üçün minimum yaş həddi 21 yaş və 2 il sürücülük stajıdır. Premium SUV (G63 AMG) və lüks modellər üçün minimum 24 yaş və 3 il təcrübə tələb olunur. Sürücülü icarədə yaş məhdudiyyəti yoxdur.
+          </div>
+        </div>
+
+        <!-- FAQ item 3 -->
+        <div class="bg-[#0F1117] rounded-2xl border border-white/10 overflow-hidden">
+          <button onclick="toggleFAQ(2)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <span class="font-semibold text-sm sm:text-base text-white">Depozit (girov) necə ödənilir və nə vaxt geri qaytarılır?</span>
+            <span id="faq-icon-2" class="text-[#D4AF37] text-lg font-bold">+</span>
+          </button>
+          <div id="faq-answer-2" class="hidden px-5 sm:px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-3">
+            Depozit avtomobil təhvil verilərkən nağd və ya bank kartından bloklanaraq qəbul edilir. Avtomobil saz vəziyyətdə təhvil verildikdən sonra depozit tam həcmdə yerindəcə müştəriyə geri qaytarılır.
+          </div>
+        </div>
+
+        <!-- FAQ item 4 -->
+        <div class="bg-[#0F1117] rounded-2xl border border-white/10 overflow-hidden">
+          <button onclick="toggleFAQ(3)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <span class="font-semibold text-sm sm:text-base text-white">Heydər Əliyev Hava Limanında və ya oteldə təhvil almaq mümkündürmü?</span>
+            <span id="faq-icon-3" class="text-[#D4AF37] text-lg font-bold">+</span>
+          </button>
+          <div id="faq-answer-3" class="hidden px-5 sm:px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-3">
+            Bəli, tamamilə mümkündür! Əməkdaşımız avtomobili Heydər Əliyev Beynəlxalq Aeroportuna (GYD) və ya Bakının istənilən otelinə təyin olunmuş saatda çatdırır. 3 gün və daha çox icarələrdə aeroport çatdırılması pulsuzdur.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section id="contact-section" class="py-24 relative bg-[#090A0F] border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div class="space-y-8">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#D4AF37] mb-2">
+              <span class="w-5 h-[1px] bg-[#D4AF37]"></span>
+              <span>Birbaşa Əlaqə & Mərkəzi Ofis</span>
+            </div>
+            <h2 class="font-serif-luxury text-3xl sm:text-4xl font-bold text-white tracking-tight">
+              Bizimlə Əlaqə Saxlayın
+            </h2>
+            <p class="mt-3 text-xs sm:text-sm text-slate-400 leading-relaxed">
+              Avtomobil icarəsi, Heydər Əliyev Hava Limanı transferləri və toy kortejləri üçün qaynar xəttimiz və WhatsApp xidmətimiz 24/7 aktivdir.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <div class="p-4 bg-[#0F1117] rounded-2xl border border-white/10 flex items-start gap-4">
+              <div class="p-3 rounded-xl bg-[#D4AF37]/10 text-[#D4AF37] shrink-0 font-bold">TEL</div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">Qaynar Xətt (24/7 Zənglər):</div>
+                <div class="flex flex-col sm:flex-row sm:gap-4 mt-1">
+                  <a href="tel:+994502202020" class="text-sm sm:text-base font-bold text-white hover:text-[#D4AF37] tabular-nums">+994 50 220 20 20</a>
+                  <a href="tel:+994124902020" class="text-sm sm:text-base font-bold text-slate-300 hover:text-[#D4AF37] tabular-nums">+994 12 490 20 20</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 bg-[#0F1117] rounded-2xl border border-white/10 flex items-start gap-4">
+              <div class="p-3 rounded-xl bg-[#25D366]/10 text-[#25D366] shrink-0 font-bold">WA</div>
+              <div class="flex-1">
+                <div class="text-xs text-slate-400 font-medium">WhatsApp ilə dərhal yazın:</div>
+                <div class="text-sm sm:text-base font-bold text-white mt-1 tabular-nums">+994 50 220 20 20</div>
+                <a href="https://wa.me/994502202020?text=Salam,%20VipRent.az%20saytından%20avtomobil%20icarəsi%20haqqında%20məlumat%20almaq%20istəyirəm." target="_blank" rel="noopener noreferrer" class="inline-block mt-2 text-xs font-semibold text-[#25D366] hover:underline">Çatı açın →</a>
+              </div>
+            </div>
+
+            <div class="p-4 bg-[#0F1117] rounded-2xl border border-white/10 flex items-start gap-4">
+              <div class="p-3 rounded-xl bg-[#D4AF37]/10 text-[#D4AF37] shrink-0 font-bold">ÜNVAN</div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">Mərkəzi Ofis və Təhvil Məntəqəsi:</div>
+                <div class="text-xs sm:text-sm font-semibold text-white mt-1">Bakı şəhəri, Neftçilər prospekti 151 (Port Baku yaxınlığı)</div>
+                <div class="text-[11px] text-slate-400 mt-0.5">Heydər Əliyev Beynəlxalq Aeroportu Terminal 1 (VIP qarşılanma)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Callback Form -->
+        <div class="glass-panel-gold rounded-3xl p-6 sm:p-8 shadow-2xl">
+          <h3 class="font-serif-luxury text-xl sm:text-2xl font-bold text-white mb-2">Sürətli Əlaqə və Zəng Sifarişi</h3>
+          <p class="text-xs text-slate-300 mb-6">Məlumatlarınızı qeyd edin, menecerimiz 5 dəqiqə ərzində sizinlə əlaqə saxlasın.</p>
+
+          <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">Adınız və Soyadınız</label>
+              <input type="text" id="contact-name" required placeholder="Məs. Elnur Həsənov" class="w-full bg-[#0B0D13] border border-white/15 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-[#D4AF37]" />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">Telefon Nömrəniz</label>
+              <input type="tel" id="contact-phone" required placeholder="+994 50 123 45 67" class="w-full bg-[#0B0D13] border border-white/15 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-[#D4AF37] tabular-nums" />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">Maraqlandığınız Avtomobil və ya Xidmət</label>
+              <textarea id="contact-msg" rows="3" placeholder="Məs. 3 günlük Mercedes S-Class lazımdır..." class="w-full bg-[#0B0D13] border border-white/15 rounded-xl px-4 py-2 text-xs sm:text-sm text-white focus:outline-none focus:border-[#D4AF37]"></textarea>
+            </div>
+            <button type="submit" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-[#F5E6BE] via-[#D4AF37] to-[#AA820A] text-black font-bold text-xs uppercase tracking-wider hover:brightness-110 active:scale-95 transition-all">
+              Sorğunu Göndər
+            </button>
+          </form>
+          <div id="contact-success" class="hidden py-8 text-center space-y-3">
+            <div class="text-[#D4AF37] text-3xl font-bold">✓</div>
+            <h4 class="font-serif-luxury text-lg font-bold text-white">Təşəkkür edirik!</h4>
+            <p class="text-xs text-slate-300">Sorğunuz qeydə alındı. Menecerimiz 5 dəqiqə ərzində sizinlə əlaqə saxlayacaq.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-[#050608] border-t border-white/10 text-slate-400 text-xs mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#D4AF37] via-[#AA820A] to-[#604905] p-[1px] flex items-center justify-center">
+              <div class="w-full h-full bg-[#07080B] rounded-[7px] flex items-center justify-center font-bold text-[#D4AF37]">VR</div>
+            </div>
+            <span class="font-serif-luxury text-xl font-bold text-white tracking-wide">VipRent<span class="text-[#D4AF37]">.az</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Bakıda lüks və premium avtomobillərin icarəsi, Heydər Əliyev Hava Limanı transferləri, toy kortejləri və fərdi VIP şofer xidməti.
+          </p>
+          <div class="text-[#D4AF37] font-semibold">100% KASKO & İcbari Sığorta</div>
+        </div>
+
+        <div class="space-y-3">
+          <div class="font-serif-luxury text-sm font-bold text-white uppercase tracking-wider">Avtopark / Flot</div>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#fleet-section" class="hover:text-[#D4AF37]">Mercedes-Benz S-Class & Maybach</a></li>
+            <li><a href="#fleet-section" class="hover:text-[#D4AF37]">Mercedes G63 AMG & Range Rover</a></li>
+            <li><a href="#fleet-section" class="hover:text-[#D4AF37]">Bentley Continental & Porsche</a></li>
+            <li><a href="#fleet-section" class="hover:text-[#D4AF37]">V-Class & Sprinter VIP Lounge</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <div class="font-serif-luxury text-sm font-bold text-white uppercase tracking-wider">Xidmətlər</div>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#services-section" class="hover:text-[#D4AF37]">Heydər Əliyev Aeroport Transferi</a></li>
+            <li><a href="#services-section" class="hover:text-[#D4AF37]">Şəxsi Şoferlə İcarə (VIP Chauffeur)</a></li>
+            <li><a href="#services-section" class="hover:text-[#D4AF37]">Toy Kortejləri & Gəlin Maşını</a></li>
+            <li><button onclick="openRequirementsModal()" class="hover:text-[#D4AF37] text-left">İcarə Şərtləri & Qaydalar</button></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <div class="font-serif-luxury text-sm font-bold text-white uppercase tracking-wider">24/7 Qaynar Xətt</div>
+          <div class="space-y-2 text-slate-300">
+            <div>Tel: <a href="tel:+994502202020" class="hover:text-white tabular-nums font-bold">+994 50 220 20 20</a></div>
+            <div>WhatsApp: <a href="https://wa.me/994502202020" class="hover:text-[#25D366] tabular-nums font-bold">+994 50 220 20 20</a></div>
+            <div>Ünvan: Neftçilər prospekti 151, Bakı</div>
+            <div>E-poçt: booking@viprent.az</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500">
+        <div>© 2026 VipRent.az — Bütün hüquqlar qorunur. Bakı, Azərbaycan.</div>
+        <div class="flex items-center gap-4 text-xs">
+          <span>Məxfilik siyasəti</span>
+          <span>·</span>
+          <span>İstifadə qaydaları</span>
+          <span>·</span>
+          <span>KASKO Sığorta</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== BOOKING MODAL & DRAWER ==================== -->
+  <div id="booking-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto">
+    <div class="relative w-full max-w-2xl bg-[#0F1117] border border-white/15 rounded-3xl shadow-2xl overflow-hidden my-auto max-h-[92vh] flex flex-col">
+      <div class="flex items-center justify-between p-5 sm:p-6 border-b border-white/10 bg-[#141720]">
+        <div>
+          <div class="text-[11px] font-semibold text-[#D4AF37] uppercase tracking-wider">Rezervasiya və Hesablama</div>
+          <h2 id="modal-car-name" class="font-serif-luxury text-xl sm:text-2xl font-bold text-white mt-0.5">Avtomobil Seçimi</h2>
+        </div>
+        <button onclick="closeBookingModal()" class="p-2 text-slate-400 hover:text-white rounded-xl bg-white/5 border border-white/10 cursor-pointer">✕</button>
+      </div>
+
+      <div class="p-5 sm:p-6 overflow-y-auto space-y-6">
+        <div id="booking-form-container">
+          <!-- Car Preview Strip -->
+          <div class="flex items-center gap-4 p-3 bg-black/40 rounded-2xl border border-white/5 mb-4">
+            <img id="modal-car-img" src="" alt="Selected Car" class="w-24 h-16 sm:w-28 sm:h-18 object-cover rounded-xl shrink-0" />
+            <div class="flex-1 min-w-0 text-xs">
+              <div id="modal-car-title" class="font-bold text-white text-sm sm:text-base truncate">Mercedes-Benz</div>
+              <div id="modal-car-subtitle" class="text-slate-400 mt-0.5">Lüks Sedan · 2024</div>
+              <div id="modal-car-rate" class="text-[#D4AF37] font-semibold mt-1">500 ₼ / gün</div>
+            </div>
+          </div>
+
+          <!-- Dates & Location -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">Götürülmə tarixi</label>
+              <input type="date" id="book-start-date" value="2026-10-25" onchange="calculateBookingTotal()" class="w-full bg-[#0B0D13] border border-white/15 rounded-xl px-3 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-[#D4AF37] [color-scheme:dark]" />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">Qaytarılma tarixi</label>
+              <input type="date" id="book-end-date" value="2026-10-28" onchange="calculateBookingTotal()" class="w-full bg-[#0B0D13] border border-white/15 rounded-xl px-3 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-[#D4AF37] [color-scheme:dark]" />
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">Təhvil alma məntəqəsi</label>
+              <select id="book-location" class="w-full bg-[#0B0D13] border border-white/15 rounded-xl px-3 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-[#D4AF37]">
+                <option value="Heydər Əliyev Hava Limanı (GYD)">Heydər Əliyev Beynəlxalq Aeroportu (GYD Terminal 1)</option>
+                <option value="Port Baku Residence / Neftçilər pr.">Port Baku Residence / Neftçilər prospekti</option>
+                <option value="Four Seasons Hotel Baku">Four Seasons Hotel Baku</option>
+                <option value="JW Marriott Absheron Baku">JW Marriott Absheron Baku</option>
+                <option value="Ağ Şəhər (Baku White City)">Ağ Şəhər (Baku White City)</option>
+                <option value="Fərdi ünvan (şəhər daxili)">Digər ünvan (menecerlə dəqiqləşdiriləcək)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Options Toggles -->
+          <div class="space-y-3 pt-3">
+            <div class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Əlavə Seçimlər:</div>
+            <label class="flex items-center justify-between p-3.5 bg-[#141720] rounded-xl border border-white/10 hover:border-[#D4AF37]/50 cursor-pointer">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" id="book-driver-check" onchange="calculateBookingTotal()" class="w-4 h-4 accent-[#D4AF37]" />
+                <div>
+                  <div class="text-xs sm:text-sm font-semibold text-white">Şəxsi Şofer Xidməti (VIP Chauffeur)</div>
+                  <div class="text-[11px] text-slate-400">Kostyumlu, xarici dil bilən sürücü</div>
+                </div>
+              </div>
+              <div class="text-xs font-bold text-[#D4AF37]">+50 ₼ / gün</div>
+            </label>
+            <label class="flex items-center justify-between p-3.5 bg-[#141720] rounded-xl border border-white/10 hover:border-[#D4AF37]/50 cursor-pointer">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" id="book-airport-check" onchange="calculateBookingTotal()" class="w-4 h-4 accent-[#D4AF37]" />
+                <div>
+                  <div class="text-xs sm:text-sm font-semibold text-white">Aeroportda Adla Qarşılanma (Meet & Greet)</div>
+                  <div id="airport-tag" class="text-[11px] text-slate-400">Baqaj daşınması və fərdi lövhə</div>
+                </div>
+              </div>
+              <div id="airport-fee-text" class="text-xs font-bold text-[#D4AF37]">+30 ₼</div>
+            </label>
+          </div>
+
+          <!-- Customer details -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3">
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">Adınız və Soyadınız *</label>
+              <input type="text" id="book-name" required placeholder="Məs. Fərid Məmmədov" class="w-full bg-[#0B0D13] border border-white/15 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-[#D4AF37]" />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">Əlaqə Telefonu (WhatsApp) *</label>
+              <input type="tel" id="book-phone" required placeholder="+994 50 123 45 67" class="w-full bg-[#0B0D13] border border-white/15 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-[#D4AF37] tabular-nums" />
+            </div>
+          </div>
+
+          <!-- Calculation Summary -->
+          <div class="mt-4 p-4 bg-gradient-to-br from-[#141720] to-[#0A0C10] rounded-2xl border border-[#D4AF37]/30 space-y-2 text-xs">
+            <div class="flex justify-between text-slate-300">
+              <span>İcarə müddəti:</span>
+              <span id="calc-days" class="font-semibold text-white">3 gün</span>
+            </div>
+            <div class="flex justify-between text-slate-300">
+              <span>Avtomobil icarəsi:</span>
+              <span id="calc-car-total" class="font-semibold text-white tabular-nums">1500 ₼</span>
+            </div>
+            <div id="calc-driver-row" class="hidden flex justify-between text-slate-300">
+              <span>Şəxsi Sürücü haqqı:</span>
+              <span id="calc-driver-total" class="font-semibold text-white tabular-nums">+150 ₼</span>
+            </div>
+            <div id="calc-airport-row" class="hidden flex justify-between text-slate-300">
+              <span>Aeroport transferi:</span>
+              <span id="calc-airport-total" class="font-semibold text-white tabular-nums">+30 ₼</span>
+            </div>
+            <div class="flex justify-between text-slate-400 pt-2 border-t border-white/10">
+              <span>Qaytarılan Depozit:</span>
+              <span id="calc-deposit" class="font-medium text-slate-200 tabular-nums">600 ₼</span>
+            </div>
+            <div class="flex items-baseline justify-between pt-2 border-t border-white/15">
+              <span class="text-sm font-bold text-white">Yekun İcarə Məbləği:</span>
+              <span id="calc-grand-total" class="text-xl sm:text-2xl font-bold text-[#D4AF37] tabular-nums">1500 ₼</span>
+            </div>
+          </div>
+
+          <!-- Action buttons -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
+            <button type="button" onclick="submitWhatsAppBooking()" class="w-full py-3.5 px-4 rounded-xl bg-[#25D366] text-black font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:brightness-110 active:scale-95 transition-all">
+              <span>WhatsApp ilə Sifariş Et</span>
+            </button>
+            <button type="button" onclick="submitOnlineBooking()" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-[#F5E6BE] via-[#D4AF37] to-[#AA820A] text-black font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-[#D4AF37]/20">
+              <span>Onlayn Rezervasiya Et</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Success Container -->
+        <div id="booking-success-container" class="hidden py-8 text-center space-y-4">
+          <div class="w-16 h-16 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37] flex items-center justify-center mx-auto text-[#D4AF37] text-2xl font-bold">✓</div>
+          <h3 class="font-serif-luxury text-2xl font-bold text-white">Rezervasiyanız Qəbul Olundu!</h3>
+          <p class="text-xs sm:text-sm text-slate-300 max-w-md mx-auto">
+            Rezervasiya nömrəniz: <strong id="success-booking-id" class="text-[#D4AF37] font-mono">VR-892134</strong>. Menecerimiz 5 dəqiqə ərzində sizinlə əlaqə saxlayacaq.
+          </p>
+          <div class="pt-4 flex justify-center gap-3">
+            <button onclick="submitWhatsAppBooking()" class="px-6 py-3 rounded-xl bg-[#25D366] text-black font-bold text-xs uppercase">WhatsApp ilə Sürətləndir</button>
+            <button onclick="closeBookingModal()" class="px-6 py-3 rounded-xl bg-white/10 text-white font-semibold text-xs">Pəncərəni Bağla</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== VEHICLE DETAILS MODAL ==================== -->
+  <div id="details-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto">
+    <div class="relative w-full max-w-3xl bg-[#0F1117] border border-white/15 rounded-3xl shadow-2xl overflow-hidden my-auto max-h-[92vh] flex flex-col">
+      <div class="relative aspect-[16/9] sm:aspect-[21/9] w-full bg-[#141720] shrink-0">
+        <img id="detail-img" src="" alt="Car Details" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0F1117] via-transparent to-black/50"></div>
+        <button onclick="closeDetailsModal()" class="absolute top-4 right-4 p-2 text-white bg-black/60 hover:bg-[#D4AF37] hover:text-black rounded-xl">✕</button>
+        <div class="absolute bottom-4 left-6 right-6">
+          <div id="detail-category" class="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider mb-1">Lüks Sedan · 2024</div>
+          <h2 id="detail-name" class="font-serif-luxury text-2xl sm:text-3xl font-bold text-white">Mercedes-Benz S-Class</h2>
+        </div>
+      </div>
+
+      <div class="p-6 overflow-y-auto space-y-6">
+        <div>
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Texniki Xüsusiyyətlər</div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+            <div class="p-3 bg-[#141720] rounded-xl border border-white/5">
+              <div class="text-slate-400">Güc & Sürət</div>
+              <div id="detail-power" class="font-bold text-white text-sm mt-1">503 a.g.</div>
+              <div id="detail-accel" class="text-[10px] text-slate-400">4.4 san (0-100)</div>
+            </div>
+            <div class="p-3 bg-[#141720] rounded-xl border border-white/5">
+              <div class="text-slate-400">Mühərrik</div>
+              <div id="detail-engine" class="font-bold text-white text-sm mt-1 truncate">4.0L V8 Biturbo</div>
+              <div id="detail-fuel" class="text-[10px] text-slate-400">Benzin (Premium 98)</div>
+            </div>
+            <div class="p-3 bg-[#141720] rounded-xl border border-white/5">
+              <div class="text-slate-400">Oturacaq sayı</div>
+              <div id="detail-seats" class="font-bold text-white text-sm mt-1">4 Nəfərlik</div>
+              <div class="text-[10px] text-slate-400">V.I.P. Salon</div>
+            </div>
+            <div class="p-3 bg-[#141720] rounded-xl border border-white/5">
+              <div class="text-slate-400">Transmissiya</div>
+              <div id="detail-trans" class="font-bold text-white text-sm mt-1 truncate">9G-Tronic</div>
+              <div class="text-[10px] text-slate-400">4MATIC / AWD</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Avtomobil Haqqında</div>
+          <p id="detail-desc" class="text-xs sm:text-sm text-slate-300 leading-relaxed"></p>
+        </div>
+
+        <div>
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Salona və İcarəyə Daxildir</div>
+          <div id="detail-features" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-200">
+            <!-- Features populated by JS -->
+          </div>
+        </div>
+      </div>
+
+      <div class="p-5 sm:p-6 bg-[#141720] border-t border-white/10 flex items-center justify-between gap-4 shrink-0">
+        <div>
+          <div class="text-[11px] text-slate-400 uppercase">Günlük İcarə</div>
+          <div id="detail-rate" class="text-2xl font-bold text-white tabular-nums">500 ₼ / gün</div>
+        </div>
+        <button id="detail-book-btn" class="px-6 py-3 rounded-xl bg-gradient-to-r from-[#F5E6BE] via-[#D4AF37] to-[#AA820A] text-black font-bold text-xs uppercase tracking-wider hover:brightness-110 active:scale-95">
+          İndi Rezervasiya Et →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== REQUIREMENTS MODAL ==================== -->
+  <div id="req-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto">
+    <div class="relative w-full max-w-2xl bg-[#0F1117] border border-white/15 rounded-3xl shadow-2xl overflow-hidden my-auto max-h-[92vh] flex flex-col">
+      <div class="flex items-center justify-between p-5 sm:p-6 border-b border-white/10 bg-[#141720]">
+        <div>
+          <div class="text-[11px] font-semibold text-[#D4AF37] uppercase tracking-wider">Rəsmi Qaydalar</div>
+          <h2 class="font-serif-luxury text-xl sm:text-2xl font-bold text-white">İcarə Qaydaları və Tələblər</h2>
+        </div>
+        <button onclick="closeRequirementsModal()" class="p-2 text-slate-400 hover:text-white rounded-xl bg-white/5 border border-white/10 cursor-pointer">✕</button>
+      </div>
+
+      <div class="p-6 overflow-y-auto space-y-4 text-xs sm:text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-4 bg-[#141720] rounded-2xl border border-white/5 space-y-1.5">
+            <div class="font-bold text-white">Yaş və Sürücülük Təcrübəsi</div>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Biznes modellər üçün minimum <strong>21 yaş</strong> və <strong>2 il</strong> staj. Lüks və idman modelləri üçün <strong>24 yaş</strong> və <strong>3 il</strong> staj tələb olunur.
+            </p>
+            <div class="text-[11px] text-[#D4AF37]">* Şoferlə (sürücülü) icarədə yaş məhdudiyyəti yoxdur.</div>
+          </div>
+
+          <div class="p-4 bg-[#141720] rounded-2xl border border-white/5 space-y-1.5">
+            <div class="font-bold text-white">Tələb Olunan Sənədlər</div>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              <strong>Yerli vətəndaşlar:</strong> Şəxsiyyət vəsiqəsi və Sürücülük vəsiqəsi.<br>
+              <strong>Xarici vətəndaşlar:</strong> Xarici pasport və beynəlxalq və ya milli sürücülük vəsiqəsi.
+            </p>
+          </div>
+
+          <div class="p-4 bg-[#141720] rounded-2xl border border-white/5 space-y-1.5">
+            <div class="font-bold text-white">Depozit (Girov) Qaydası</div>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Modeldən asılı olaraq 350 – 1000 ₼ arası depozit tələb edilir. Avtomobil saz təhvil verildikdən sonra depozit <strong>yerindəcə tam qaytarılır</strong>.
+            </p>
+          </div>
+
+          <div class="p-4 bg-[#141720] rounded-2xl border border-white/5 space-y-1.5">
+            <div class="font-bold text-white">Yanacaq və Təmizlik</div>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Avtomobillər tam təmizlənmiş, dezinfeksiya olunmuş və dolu çənlə təqdim olunur. Eyni səviyyədə yanacaq və təmizliklə qəbul edilir (Full-to-Full).
+            </p>
+          </div>
+        </div>
+
+        <div class="p-4 bg-gradient-to-r from-[#D4AF37]/10 to-transparent rounded-2xl border border-[#D4AF37]/30 flex items-center justify-between">
+          <div>
+            <div class="font-bold text-white text-sm">100% KASKO və İcbari Sığorta</div>
+            <div class="text-xs text-slate-300">Bütün avtoparkımız rəsmi tam sığortalıdır.</div>
+          </div>
+          <div class="text-lg font-bold text-[#D4AF37]">100% KASKO</div>
+        </div>
+      </div>
+
+      <div class="p-5 sm:p-6 bg-[#141720] border-t border-white/10 flex items-center justify-between">
+        <button onclick="closeRequirementsModal()" class="px-5 py-2.5 rounded-xl bg-white/10 text-xs text-white">Bağla</button>
+        <button onclick="closeRequirementsModal(); document.getElementById('fleet-section').scrollIntoView({behavior: 'smooth'});" class="px-6 py-2.5 rounded-xl bg-[#D4AF37] text-black text-xs font-bold uppercase tracking-wider">Avtoparka Keç</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+  <div class="fixed bottom-6 right-6 z-40">
+    <a href="https://wa.me/994502202020?text=Salam,%20VipRent.az%20saytından%20avtomobil%20icarəsi%20haqqında%20məlumat%20almaq%20istəyirəm." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 px-4 py-3 bg-[#25D366] text-black font-bold text-xs uppercase tracking-wider rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all">
+      <span>WhatsApp Dəstək</span>
+    </a>
+  </div>
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script>
+    // 1. VEHICLES DATA
+    const VEHICLES = [
+      {
+        id: 'mercedes-s-class-w223',
+        name: 'Mercedes-Benz S-Class S580 (W223)',
+        category: 'luxury',
+        categoryLabel: 'Lüks Sedan',
+        year: 2024,
+        engine: '4.0L V8 Biturbo',
+        power: '503 a.g.',
+        acceleration: '4.4 san (0-100)',
+        seats: 4,
+        transmission: '9G-Tronic Avtomat',
+        fuel: 'Benzin (Premium 98)',
+        priceAZN: 500,
+        weeklyPriceAZN: 450,
+        depositAZN: 600,
+        badge: 'V.I.P. Flotman',
+        imageUrl: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1200&q=80',
+        features: ['Masaj və soyutma funksiyalı Nappa dəri oturacaqlar', 'Burmester High-End 4D Surround audio', 'Panoramik lyuk və arxa V.I.P. planşet', 'KASKO və İcbari sığorta daxildir', 'Pulsuz Wi-Fi və premium içkilər'],
+        description: 'Biznes görüşlər, dövlət nümayəndəlikləri və xüsusi tədbirlər üçün alman mühəndisliyinin ən yüksək zirvəsi.'
+      },
+      {
+        id: 'mercedes-g63-amg',
+        name: 'Mercedes-AMG G 63 (G-Class)',
+        category: 'suv',
+        categoryLabel: 'SUV & Off-Road',
+        year: 2024,
+        engine: '4.0L V8 AMG Biturbo',
+        power: '585 a.g.',
+        acceleration: '4.5 san (0-100)',
+        seats: 5,
+        transmission: 'AMG SPEEDSHIFT 9G',
+        fuel: 'Benzin (Super 98)',
+        priceAZN: 750,
+        weeklyPriceAZN: 680,
+        depositAZN: 1000,
+        badge: 'Ən Çox Tələb Olunan',
+        imageUrl: 'https://images.unsplash.com/photo-1520050206274-a1ae44613e6d?auto=format&fit=crop&w=1200&q=80',
+        features: ['AMG Performance səsboğucu sistemi', 'Qara Edition Night Package', 'Tam ötürücülü 4MATIC+ və 3 diferensial kilidi', 'KASKO tam sığorta daxildir'],
+        description: 'Bakı küçələrində və dağlıq marşrutlarda bənzərsiz status, güc və dominant görünüş. Toy kortejlərinin əvəzolunmaz lideri.'
+      },
+      {
+        id: 'bmw-7-series-g70',
+        name: 'BMW 7 Series 740i M-Sport (G70)',
+        category: 'luxury',
+        categoryLabel: 'Lüks Sedan',
+        year: 2024,
+        engine: '3.0L TwinPower Turbo',
+        power: '381 a.g.',
+        acceleration: '5.2 san (0-100)',
+        seats: 5,
+        transmission: '8-Pilləli Steptronic',
+        fuel: 'Benzin / Mild Hybrid',
+        priceAZN: 450,
+        weeklyPriceAZN: 400,
+        depositAZN: 500,
+        badge: 'Yeni Nəsil',
+        imageUrl: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80',
+        features: ['31.3 düymlük BMW Theatre Screen 8K arxa kinoteatr', 'İkonik kristal işıqlandırma', 'Bowers & Wilkins Diamond audio', 'Pnevmatik aktiv asqı'],
+        description: 'Gələcəyin lüks sedanı. Arxa oturacaqda 31 düymlük kinoteatr ekranı və kristal interyer ilə rəsmi qonaqlar üçün ən müasir seçim.'
+      },
+      {
+        id: 'range-rover-autobiography',
+        name: 'Range Rover Autobiography LWB',
+        category: 'suv',
+        categoryLabel: 'SUV & Off-Road',
+        year: 2024,
+        engine: '4.4L Twin-Turbo V8',
+        power: '530 a.g.',
+        acceleration: '4.6 san (0-100)',
+        seats: 5,
+        transmission: 'ZF 8-Pilləli Avtomat',
+        fuel: 'Benzin',
+        priceAZN: 650,
+        weeklyPriceAZN: 580,
+        depositAZN: 800,
+        badge: 'Lüks Aristokrat',
+        imageUrl: 'https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?auto=format&fit=crop&w=1200&q=80',
+        features: ['Uzadılmış baza (LWB) - maksimum arxa ayaq məsafəsi', 'Meridian Signature 1600W audio', 'Pnevmoasqı və tam ötürücülü AWD'],
+        description: 'Kral ailəsinin rahatlığı və Britaniya zərifliyi. Şəhərdə və magistral yollarda mütləq səssizlik və maksimum komfortun təcəssümü.'
+      },
+      {
+        id: 'mercedes-v-class-vip',
+        name: 'Mercedes-Benz V-Class Maybach VIP Lounge',
+        category: 'minivan',
+        categoryLabel: 'VIP Minivan',
+        year: 2024,
+        engine: '2.0L Twin-Turbo Dizel',
+        power: '237 a.g.',
+        acceleration: '7.8 san (0-100)',
+        seats: 7,
+        transmission: '9G-Tronic Avtomat',
+        fuel: 'Dizel / Benzin',
+        priceAZN: 400,
+        weeklyPriceAZN: 350,
+        depositAZN: 400,
+        badge: 'Biznes Nümayəndəliyi',
+        imageUrl: 'https://images.unsplash.com/photo-1570733577524-3a047079e80d?auto=format&fit=crop&w=1200&q=80',
+        features: ['Maybach First-Class elektrikli uzanan kreslolar', 'Smart TV, PlayStation, Wi-Fi', 'Mini-bar, soyuducu, Nespresso qəhvə aparatı', 'Ulduzlu tavan ambiansı'],
+        description: 'Təkərlər üzərində şəxsi təyyarə salonu. Heydər Əliyev Hava Limanı transferləri və diplomatik qonaqlar üçün ideal.'
+      },
+      {
+        id: 'rolls-royce-ghost',
+        name: 'Rolls-Royce Ghost Black Badge',
+        category: 'luxury',
+        categoryLabel: 'Lüks Sedan',
+        year: 2023,
+        engine: '6.75L Twin-Turbo V12',
+        power: '600 a.g.',
+        acceleration: '4.7 san (0-100)',
+        seats: 4,
+        transmission: 'Satellite Aided 8-Pilləli',
+        fuel: 'Benzin (Super 98)',
+        priceAZN: 1400,
+        weeklyPriceAZN: 1250,
+        depositAZN: 2000,
+        badge: 'Ultra V.I.P.',
+        imageUrl: 'https://images.unsplash.com/photo-1631295868223-63265b40d9e4?auto=format&fit=crop&w=1200&q=80',
+        features: ['Əl işi Starlight Headliner (ulduzlu səma)', 'Elektriklə bağlanan qapılar', 'Yalnız peşəkar kostyumlu şəxsi sürücü ilə', 'VIP eskort müşayiəti təşkil edilə bilər'],
+        description: 'Dünyanın ən prestijli avtomobili. Qüsursuz sakitlik, əl işi interyer və statusunuzun ən yüksək səviyyədə təmsili.'
+      },
+      {
+        id: 'porsche-panamera-4s',
+        name: 'Porsche Panamera 4S Gran Turismo',
+        category: 'sports',
+        categoryLabel: 'İdman & Kabriolet',
+        year: 2024,
+        engine: '2.9L Twin-Turbo V6',
+        power: '440 a.g.',
+        acceleration: '4.1 san (0-100)',
+        seats: 4,
+        transmission: '8-Pilləli Porsche PDK',
+        fuel: 'Benzin (Premium 98)',
+        priceAZN: 480,
+        weeklyPriceAZN: 420,
+        depositAZN: 600,
+        badge: 'İdman Zərifliyi',
+        imageUrl: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80',
+        features: ['Sport Chrono paketi və idman səsboğucu', '14 istiqamətli elektrik idman oturacaqları', 'BOSE Surround səs sistemi', 'PASM pnevmatik asqı'],
+        description: 'İdman avtomobilinin adrenalin dolu dinamikası və dördqapılı sedanın premium rahatlığı bir arada.'
+      },
+      {
+        id: 'cadillac-escalade-platinum',
+        name: 'Cadillac Escalade Platinum ESV',
+        category: 'suv',
+        categoryLabel: 'SUV & Off-Road',
+        year: 2023,
+        engine: '6.2L EcoTec3 V8',
+        power: '420 a.g.',
+        acceleration: '5.9 san (0-100)',
+        seats: 7,
+        transmission: '10-Pilləli Hydra-Matic',
+        fuel: 'Benzin',
+        priceAZN: 600,
+        weeklyPriceAZN: 520,
+        depositAZN: 700,
+        badge: 'Maksimum Ölçü',
+        imageUrl: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80',
+        features: ['38 düymlük əyri OLED cihazlar paneli', '36 dinamikli AKG Studio Reference audio', 'Genişləndirilmiş ESV baqaj tutumu', 'Magnetic Ride Control'],
+        description: 'Amerika lüksünün nəhəng simvolu. 7 nəfərlik salon və nəhəng baqaj həcmi.'
+      },
+      {
+        id: 'bentley-continental-gt',
+        name: 'Bentley Continental GT V8 Mulliner',
+        category: 'sports',
+        categoryLabel: 'İdman & Kabriolet',
+        year: 2023,
+        engine: '4.0L Twin-Turbo V8',
+        power: '550 a.g.',
+        acceleration: '3.9 san (0-100)',
+        seats: 4,
+        transmission: '8-Pilləli İki Muftalı Avtomat',
+        fuel: 'Benzin (Super 98)',
+        priceAZN: 950,
+        weeklyPriceAZN: 850,
+        depositAZN: 1200,
+        badge: 'Kupe Şah əsəri',
+        imageUrl: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1200&q=80',
+        features: ['Bentley Rotating Display fırlanan panel', 'Almaz naxışlı əl tikişi Mulliner dəri', 'Naim for Bentley 2200W premium audio'],
+        description: 'Britaniya sənətkarlığının şah əsəri. Klip, fotosessiya, toy korteji və ya unudulmaz həftəsonu üçün ən zövqlü seçim.'
+      },
+      {
+        id: 'mercedes-e-class-w213',
+        name: 'Mercedes-Benz E-Class E300 AMG Line',
+        category: 'business',
+        categoryLabel: 'Biznes Klass',
+        year: 2023,
+        engine: '2.0L Turbo 4-Silindr',
+        power: '258 a.g.',
+        acceleration: '6.2 san (0-100)',
+        seats: 5,
+        transmission: '9G-Tronic Avtomat',
+        fuel: 'Benzin',
+        priceAZN: 220,
+        weeklyPriceAZN: 190,
+        depositAZN: 350,
+        badge: 'Optimal Biznes',
+        imageUrl: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1200&q=80',
+        features: ['AMG Line idman dizayn paketi', 'Widescreen Cockpit qoşa monitorlar', 'Burmester Surround səs sistemi'],
+        description: 'Hər gün üçün ideal biznes sedanı. Şəhərdaxili görüşlər və hava limanı transferləri üçün ən sərfəli həll.'
+      },
+      {
+        id: 'toyota-land-cruiser-300',
+        name: 'Toyota Land Cruiser 300 V6 Twin Turbo',
+        category: 'suv',
+        categoryLabel: 'SUV & Off-Road',
+        year: 2024,
+        engine: '3.5L Twin-Turbo V6',
+        power: '415 a.g.',
+        acceleration: '6.7 san (0-100)',
+        seats: 7,
+        transmission: '10-Pilləli Direct Shift Avtomat',
+        fuel: 'Benzin',
+        priceAZN: 380,
+        weeklyPriceAZN: 330,
+        depositAZN: 500,
+        badge: 'Etibarlılıq',
+        imageUrl: 'https://images.unsplash.com/photo-1594502184342-2e12f877aa73?auto=format&fit=crop&w=1200&q=80',
+        features: ['Multi-Terrain Select və Crawl Control', 'JBL Synthesis audio sistemi', 'Soyuduculu mərkəzi konsol'],
+        description: 'Əfsanəvi dözümlülük və yüksək komfort. Bakıdan bölgələrə səyahətlər üçün etibarlı tərəfdaş.'
+      },
+      {
+        id: 'mercedes-sprinter-vip',
+        name: 'Mercedes-Benz Sprinter VIP Business Jet',
+        category: 'minivan',
+        categoryLabel: 'VIP Minivan / Bus',
+        year: 2023,
+        engine: '3.0L V6 CDI Dizel',
+        power: '190 a.g.',
+        acceleration: 'Maks. Komfort',
+        seats: 14,
+        transmission: '7G-Tronic Plus Avtomat',
+        fuel: 'Dizel',
+        priceAZN: 550,
+        weeklyPriceAZN: 480,
+        depositAZN: 500,
+        badge: '14 Nəfərlik VIP',
+        imageUrl: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80',
+        features: ['Maybach tipli anatomik dəri oturacaqlar', '43" Smart TV, Wi-Fi', 'Qatlanan iş masaları və 220V yuvalar', 'Yalnız peşəkar sürücü ilə'],
+        description: 'Beynəlxalq konfranslar, böyük nümayəndə heyətləri və korporativ komandalar üçün ən yüksək səviyyəli mikroavtobus.'
+      }
+    ];
+
+    // State Variables
+    let currentCurrency = 'AZN';
+    let currentCategory = 'all';
+    let searchQuery = '';
+    let currentSort = 'recommended';
+    let currentSelectedVehicle = VEHICLES[0];
+    let isHeroDriver = true;
+
+    // Currency Formatter
+    function formatMoney(aznAmount) {
+      if (currentCurrency === 'AZN') {
+        return aznAmount + ' ₼';
+      } else if (currentCurrency === 'USD') {
+        return '$' + Math.round(aznAmount / 1.70);
+      } else {
+        return '€' + Math.round(aznAmount / 1.85);
+      }
+    }
+
+    // Set Currency
+    function setCurrency(curr) {
+      currentCurrency = curr;
+      ['AZN', 'USD', 'EUR'].forEach(c => {
+        const btn = document.getElementById('curr-btn-' + c);
+        if (btn) {
+          if (c === curr) {
+            btn.className = 'px-2.5 py-1 text-xs rounded transition-all bg-[#D4AF37] text-black font-bold';
+          } else {
+            btn.className = 'px-2.5 py-1 text-xs rounded transition-all text-slate-400 hover:text-white';
+          }
+        }
+      });
+      renderFleet();
+      calculateBookingTotal();
+    }
+
+    // Toggle Mobile Menu
+    function toggleMobileMenu() {
+      const el = document.getElementById('mobile-menu');
+      el.classList.toggle('hidden');
+    }
+
+    // Hero Driver Toggle
+    function setHeroDriver(withDriver) {
+      isHeroDriver = withDriver;
+      const yesBtn = document.getElementById('driver-toggle-yes');
+      const noBtn = document.getElementById('driver-toggle-no');
+      if (withDriver) {
+        yesBtn.className = 'px-4 py-2 text-xs font-semibold rounded-lg bg-[#D4AF37] text-black shadow-md font-bold transition-all';
+        noBtn.className = 'px-4 py-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-white transition-all';
+      } else {
+        noBtn.className = 'px-4 py-2 text-xs font-semibold rounded-lg bg-[#D4AF37] text-black shadow-md font-bold transition-all';
+        yesBtn.className = 'px-4 py-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-white transition-all';
+      }
+    }
+
+    // Hero Search Handler
+    function handleHeroSearch(e) {
+      e.preventDefault();
+      const cat = document.getElementById('hero-category').value;
+      filterCategory(cat);
+      const fleetSec = document.getElementById('fleet-section');
+      fleetSec.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Category Filter
+    function filterCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        btn.className = 'cat-btn px-4 py-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-white whitespace-nowrap';
+      });
+      const activeBtn = document.getElementById('cat-' + cat);
+      if (activeBtn) {
+        activeBtn.className = 'cat-btn px-4 py-2 text-xs font-semibold rounded-lg bg-[#D4AF37] text-black shadow-md font-bold whitespace-nowrap';
+      }
+      renderFleet();
+    }
+
+    // Search input handler
+    function handleSearchInput() {
+      searchQuery = document.getElementById('car-search').value.toLowerCase().trim();
+      renderFleet();
+    }
+
+    // Sort handler
+    function handleSortChange() {
+      currentSort = document.getElementById('sort-select').value;
+      renderFleet();
+    }
+
+    // Render Fleet Grid
+    function renderFleet() {
+      const container = document.getElementById('fleet-grid');
+      let filtered = VEHICLES.filter(car => {
+        if (currentCategory !== 'all' && car.category !== currentCategory) return false;
+        if (searchQuery) {
+          const nameMatch = car.name.toLowerCase().includes(searchQuery);
+          const catMatch = car.categoryLabel.toLowerCase().includes(searchQuery);
+          const engineMatch = car.engine.toLowerCase().includes(searchQuery);
+          if (!nameMatch && !catMatch && !engineMatch) return false;
+        }
+        return true;
+      });
+
+      if (currentSort === 'price-asc') {
+        filtered.sort((a, b) => a.priceAZN - b.priceAZN);
+      } else if (currentSort === 'price-desc') {
+        filtered.sort((a, b) => b.priceAZN - a.priceAZN);
+      } else if (currentSort === 'year') {
+        filtered.sort((a, b) => b.year - a.year);
+      }
+
+      document.getElementById('vehicle-count').textContent = `${filtered.length} / ${VEHICLES.length}`;
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full py-16 text-center text-slate-400">
+            <div class="text-xl font-bold text-white mb-2">Axtarışa uyğun avtomobil tapılmadı</div>
+            <p class="text-xs">Zəhmət olmasa filtri dəyişin və ya axtarış sorğusunu sıfırlayın.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(car => `
+        <div class="group relative bg-[#0F1117] rounded-2xl border border-white/10 hover:border-[#D4AF37]/50 transition-all flex flex-col justify-between overflow-hidden shadow-xl">
+          <div>
+            <!-- Image -->
+            <div class="relative aspect-[16/10] w-full overflow-hidden bg-[#141720]">
+              <img src="${car.imageUrl}" alt="${car.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0F1117] via-transparent to-black/30 pointer-events-none"></div>
+              ${car.badge ? `<div class="absolute top-3 left-3 bg-[#07080B]/80 border border-[#D4AF37]/40 px-2.5 py-1 rounded-md text-[11px] font-semibold text-[#D4AF37] uppercase">${car.badge}</div>` : ''}
+              <button onclick="openDetailsModal('${car.id}')" class="absolute top-3 right-3 p-2 rounded-lg bg-black/60 hover:bg-[#D4AF37] hover:text-black text-white text-xs font-bold transition-all cursor-pointer" title="Ətraflı Bax">
+                i
+              </button>
+            </div>
+
+            <!-- Content -->
+            <div class="p-5">
+              <div class="text-xs text-slate-400 font-medium">
+                ${car.categoryLabel} · ${car.year} Buraxılış
+              </div>
+              <h3 class="mt-1 font-serif-luxury text-lg sm:text-xl font-bold text-white group-hover:text-[#D4AF37] transition-colors truncate">
+                ${car.name}
+              </h3>
+
+              <div class="mt-4 grid grid-cols-2 gap-2 text-xs text-slate-300 border-y border-white/5 py-3">
+                <div>⚡ ${car.power}</div>
+                <div>👤 ${car.seats} Oturacaq</div>
+                <div class="truncate">⚙️ ${car.engine}</div>
+                <div>🔘 Avtomat</div>
+              </div>
+
+              <p class="mt-3 text-xs text-slate-400 line-clamp-2 leading-relaxed">
+                ${car.description}
+              </p>
+            </div>
+          </div>
+
+          <!-- Bottom Price & Buttons -->
+          <div class="p-5 pt-0">
+            <div class="flex items-baseline justify-between pt-3 border-t border-white/10 mb-4">
+              <div>
+                <div class="text-[10px] text-slate-400 uppercase">Günlük icarə</div>
+                <div class="text-2xl font-bold text-white tabular-nums">${formatMoney(car.priceAZN)} <span class="text-xs text-slate-400 font-normal">/ gün</span></div>
+              </div>
+              <div class="text-right">
+                <div class="text-[10px] text-slate-400">Həftəlik:</div>
+                <div class="text-xs font-semibold text-[#D4AF37] tabular-nums">${formatMoney(car.weeklyPriceAZN)} / gün</div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="directWhatsAppCar('${car.name}', ${car.priceAZN})" class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-white/5 hover:bg-[#25D366]/20 border border-white/10 hover:border-[#25D366]/50 text-slate-200 text-xs font-semibold cursor-pointer">
+                <span>WhatsApp</span>
+              </button>
+              <button onclick="openBookingModal('${car.id}')" class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-gradient-to-r from-[#F5E6BE] via-[#D4AF37] to-[#AA820A] text-black font-bold text-xs uppercase tracking-wider hover:brightness-110 active:scale-95 cursor-pointer">
+                <span>Rezervasiya</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Direct WhatsApp booking for specific car
+    function directWhatsAppCar(carName, price) {
+      const msg = encodeURIComponent(`Salam, VipRent.az! "${carName}" avtomobili ilə maraqlanıram. Günlük qiyməti ${price} AZN. Rezervasiya üçün mövcudluğu təsdiq edə bilərsiniz?`);
+      window.open(`https://wa.me/994502202020?text=${msg}`, '_blank');
+    }
+
+    // Open Booking Modal
+    function openBookingModal(carId) {
+      const car = VEHICLES.find(v => v.id === carId) || VEHICLES[0];
+      currentSelectedVehicle = car;
+
+      document.getElementById('modal-car-name').textContent = car.name;
+      document.getElementById('modal-car-title').textContent = car.name;
+      document.getElementById('modal-car-subtitle').textContent = `${car.categoryLabel} · ${car.year} · ${car.seats} Oturacaq`;
+      document.getElementById('modal-car-rate').textContent = `Günlük: ${formatMoney(car.priceAZN)} / gün`;
+      document.getElementById('modal-car-img').src = car.imageUrl;
+
+      document.getElementById('booking-form-container').classList.remove('hidden');
+      document.getElementById('booking-success-container').classList.add('hidden');
+
+      calculateBookingTotal();
+      document.getElementById('booking-modal').classList.remove('hidden');
+    }
+
+    function closeBookingModal() {
+      document.getElementById('booking-modal').classList.add('hidden');
+    }
+
+    // Calculate booking totals
+    function calculateBookingTotal() {
+      if (!currentSelectedVehicle) return;
+
+      const sDate = new Date(document.getElementById('book-start-date').value);
+      const eDate = new Date(document.getElementById('book-end-date').value);
+      const diffTime = eDate.getTime() - sDate.getTime();
+      const diffDays = Math.max(1, Math.ceil(diffTime / (1000 * 60 * 60 * 24)));
+
+      const isWeekly = diffDays >= 7;
+      const rateAZN = isWeekly ? currentSelectedVehicle.weeklyPriceAZN : currentSelectedVehicle.priceAZN;
+      const carTotalAZN = rateAZN * diffDays;
+
+      const hasDriver = document.getElementById('book-driver-check').checked;
+      const driverTotalAZN = hasDriver ? 50 * diffDays : 0;
+
+      const hasAirport = document.getElementById('book-airport-check').checked;
+      // Free for 3+ days
+      const isAirportFree = diffDays >= 3;
+      const airportTotalAZN = hasAirport ? (isAirportFree ? 0 : 30) : 0;
+
+      const grandTotalAZN = carTotalAZN + driverTotalAZN + airportTotalAZN;
+
+      document.getElementById('calc-days').textContent = diffDays + ' gün';
+      document.getElementById('calc-car-total').textContent = formatMoney(carTotalAZN);
+
+      const driverRow = document.getElementById('calc-driver-row');
+      if (hasDriver) {
+        driverRow.classList.remove('hidden');
+        document.getElementById('calc-driver-total').textContent = '+' + formatMoney(driverTotalAZN);
+      } else {
+        driverRow.classList.add('hidden');
+      }
+
+      const airportRow = document.getElementById('calc-airport-row');
+      const airportTag = document.getElementById('airport-tag');
+      const airportFeeText = document.getElementById('airport-fee-text');
+      if (isAirportFree) {
+        airportTag.textContent = '3+ günlük icarələrdə tamamilə pulsuzdur';
+        airportFeeText.textContent = 'PULSUZ';
+      } else {
+        airportTag.textContent = 'Baqaj daşınması və fərdi lövhə';
+        airportFeeText.textContent = '+30 ₼';
+      }
+
+      if (hasAirport) {
+        airportRow.classList.remove('hidden');
+        document.getElementById('calc-airport-total').textContent = isAirportFree ? '0 ₼ (Pulsuz)' : '+30 ₼';
+      } else {
+        airportRow.classList.add('hidden');
+      }
+
+      document.getElementById('calc-deposit').textContent = formatMoney(currentSelectedVehicle.depositAZN);
+      document.getElementById('calc-grand-total').textContent = formatMoney(grandTotalAZN) + ` (${grandTotalAZN} AZN)`;
+    }
+
+    // Submit via WhatsApp
+    function submitWhatsAppBooking() {
+      const sDate = document.getElementById('book-start-date').value;
+      const eDate = document.getElementById('book-end-date').value;
+      const location = document.getElementById('book-location').value;
+      const name = document.getElementById('book-name').value || 'Qeyd olunmayıb';
+      const phone = document.getElementById('book-phone').value || 'Qeyd olunmayıb';
+      const hasDriver = document.getElementById('book-driver-check').checked ? 'Bəli (+50 ₼/gün)' : 'Xeyr (Sürücüsüz)';
+
+      const msg = encodeURIComponent(
+        `*VipRent.az — Rezervasiya Sorğusu*\n\n` +
+        `🚗 *Model:* ${currentSelectedVehicle.name} (${currentSelectedVehicle.year})\n` +
+        `📅 *Tarix:* ${sDate} — ${eDate}\n` +
+        `📍 *Təhvil yeri:* ${location}\n` +
+        `🤵 *Şəxsi Şofer:* ${hasDriver}\n` +
+        `👤 *Müştəri:* ${name}\n` +
+        `📞 *Telefon:* ${phone}\n\n` +
+        `Zəhmət olmasa mövcudluğu və sifarişi təsdiqləyin!`
+      );
+      window.open(`https://wa.me/994502202020?text=${msg}`, '_blank');
+    }
+
+    // Submit Online
+    function submitOnlineBooking() {
+      const name = document.getElementById('book-name').value;
+      const phone = document.getElementById('book-phone').value;
+      if (!name || !phone) {
+        alert('Zəhmət olmasa adınızı və telefon nömrənizi qeyd edin.');
+        return;
+      }
+      const randomId = 'VR-' + Math.floor(100000 + Math.random() * 900000);
+      document.getElementById('success-booking-id').textContent = randomId;
+      document.getElementById('booking-form-container').classList.add('hidden');
+      document.getElementById('booking-success-container').classList.remove('hidden');
+    }
+
+    // Open Vehicle Details Modal
+    function openDetailsModal(carId) {
+      const car = VEHICLES.find(v => v.id === carId);
+      if (!car) return;
+
+      document.getElementById('detail-img').src = car.imageUrl;
+      document.getElementById('detail-name').textContent = car.name;
+      document.getElementById('detail-category').textContent = `${car.categoryLabel} · ${car.year}`;
+      document.getElementById('detail-power').textContent = car.power;
+      document.getElementById('detail-accel').textContent = car.acceleration;
+      document.getElementById('detail-engine').textContent = car.engine;
+      document.getElementById('detail-fuel').textContent = car.fuel;
+      document.getElementById('detail-seats').textContent = `${car.seats} Nəfərlik`;
+      document.getElementById('detail-trans').textContent = car.transmission;
+      document.getElementById('detail-desc').textContent = car.description;
+      document.getElementById('detail-rate').textContent = `${formatMoney(car.priceAZN)} / gün`;
+
+      document.getElementById('detail-features').innerHTML = car.features.map(f => `
+        <div class="flex items-center gap-2 p-2 bg-black/40 rounded-xl border border-white/5">
+          <span class="text-[#D4AF37]">✓</span>
+          <span>${f}</span>
+        </div>
+      `).join('');
+
+      document.getElementById('detail-book-btn').onclick = function() {
+        closeDetailsModal();
+        openBookingModal(car.id);
+      };
+
+      document.getElementById('details-modal').classList.remove('hidden');
+    }
+
+    function closeDetailsModal() {
+      document.getElementById('details-modal').classList.add('hidden');
+    }
+
+    // Requirements Modal
+    function openRequirementsModal() {
+      document.getElementById('req-modal').classList.remove('hidden');
+    }
+    function closeRequirementsModal() {
+      document.getElementById('req-modal').classList.add('hidden');
+    }
+
+    // FAQ Toggle
+    function toggleFAQ(idx) {
+      const ans = document.getElementById('faq-answer-' + idx);
+      const icon = document.getElementById('faq-icon-' + idx);
+      if (ans.classList.contains('hidden')) {
+        ans.classList.remove('hidden');
+        icon.textContent = '−';
+      } else {
+        ans.classList.add('hidden');
+        icon.textContent = '+';
+      }
+    }
+
+    // Contact Form
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      document.getElementById('contact-form').classList.add('hidden');
+      document.getElementById('contact-success').classList.remove('hidden');
+    }
+
+    // Initial render
+    window.addEventListener('DOMContentLoaded', () => {
+      renderFleet();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "VipRent.az - Bakıda Lüks Avtomobil İcarəsi və VIP Transfer",
+  "description": "Bakıda premium və lüks avtomobillərin icarəsi, Heydər Əliyev Hava Limanı VIP transferi, sürücü ilə icarə və toy kortejləri xidməti.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
